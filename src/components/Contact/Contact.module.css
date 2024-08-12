@@ -1,0 +1,24 @@
+.contactContainer {
+    border: 2px solid black;
+    display: flex;
+    border-radius: 4px;
+    flex-direction: column;
+    width: 200px;
+    padding: 4px;
+    position: relative;
+}
+
+.deleteBtn {
+    display: block;
+    width: 60px;
+    padding: 0;
+    position: absolute;
+    top: 12px;
+    right: 8px;
+}
+
+.icon {
+    width: 12px;
+    height: 12px;
+    margin-right: 8px;
+}
