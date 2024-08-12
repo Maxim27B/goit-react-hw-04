@@ -7,8 +7,8 @@ const instance = axios.create({
   },
 });
 
-const fetchPhotosWithTopic = async () => {
-  const response = await instance.get('?query=nature');
+const fetchPhotosWithTopic = async topic => {
+  const response = await instance.get(`?query=${topic}`);
   return response.data.results;
 };
 

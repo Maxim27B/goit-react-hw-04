@@ -1,17 +1,16 @@
-const ImageGallery = photos => {
+const ImageGallery = ({ photos }) => {
   return (
     <ul>
-      {/* {photos.map(photo => {
-        return (
-          <>
-            <li>
+      {Array.isArray(photos) &&
+        photos.map(photo => {
+          return (
+            <li key={photo.id}>
               <div>
-                <img src={photo.urls.regular} alt={photo.description} />
+                <img src={photo.urls.small} alt={photo.description} />
               </div>
             </li>
-          </>
-        );
-      })} */}
+          );
+        })}
     </ul>
   );
 };
