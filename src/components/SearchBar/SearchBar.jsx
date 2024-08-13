@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import css from './SearchBar.module.css';
 import toast, { Toaster } from 'react-hot-toast';
+import { FaSearch } from 'react-icons/fa';
 
 const SearchBar = ({ onSubmit }) => {
   const [notification, setNotification] = useState(false);
@@ -20,30 +21,31 @@ const SearchBar = ({ onSubmit }) => {
     toast.error('Поле пошуку не може бути порожнім.');
   };
   return (
-    <header>
-      <form onSubmit={handleSubmit}>
+    <header className={css.header}>
+      <form onSubmit={handleSubmit} className={css.form}>
+        <button className={css.btn} type="submit" onClick={notify}>
+          <FaSearch className={css.searchIcon} />
+        </button>
         <input
+          className={css.input}
           name="query"
           type="text"
           autoComplete="off"
           autoFocus
           placeholder="Search images and photos"
         />
-        <button className={css.btn} type="submit" onClick={notify}>
-          Search
-        </button>
-        {notification && (
-          <Toaster
-            toastOptions={{
-              style: {
-                border: '1px solid #713200',
-                padding: '16px',
-                color: '#713200',
-              },
-            }}
-          />
-        )}
       </form>
+      {notification && (
+        <Toaster
+          toastOptions={{
+            style: {
+              border: '1px solid #713200',
+              padding: '16px',
+              color: '#713200',
+            },
+          }}
+        />
+      )}
     </header>
   );
 };

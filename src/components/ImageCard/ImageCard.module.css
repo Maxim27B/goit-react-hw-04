@@ -1,0 +1,24 @@
+.imageContainer {
+    height: 400px;
+    overflow: hidden;
+    border: 1px solid black;
+}
+
+.image {
+    width: 400px;
+    height: 350px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.descriptionWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.likes {
+    display: block;
+    font-size: large;
+}
