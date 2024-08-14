@@ -38,6 +38,7 @@ const SearchBar = ({ onSubmit }) => {
       {notification && (
         <Toaster
           toastOptions={{
+            position: 'top-right',
             style: {
               border: '1px solid #713200',
               padding: '16px',

@@ -11,7 +11,7 @@ const fetchPhotosWithTopic = async (topic, page) => {
   const response = await instance.get(
     `?query=${topic}&orientation=squarish&per_page=12&page=${page}`
   );
-  return response.data.results;
+  return response.data;
 };
 
 export default fetchPhotosWithTopic;
